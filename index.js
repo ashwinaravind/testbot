@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var app = express();
-
+console.log("starting");
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.listen((process.env.PORT || 3000));
@@ -30,7 +30,7 @@ app.post('/webhook', function (req, res) {
       //  if (event.message && event.message.text) {
      //       sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
      //   }
-
+			console.log("starting1");
 		if (event.message && event.message.text) {
 		    if (!kittenMessage(event.sender.id, event.message.text)) {
 		        sendMessage(event.sender.id, {text: "Bot Replies: " + event.message.text});
