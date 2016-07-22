@@ -30,7 +30,7 @@ app.post('/webhook', function (req, res) {
       //  if (event.message && event.message.text) {
      //       sendMessage(event.sender.id, {text: "Echo: " + event.message.text});
      //   }
-			console.log("starting1");
+			 sendMessage(event.sender.id, {text: "Bot Replies: " + event.sender.id});
 		if (event.message && event.message.text) {
 		    if (!kittenMessage(event.sender.id, event.message.text)) {
 		        sendMessage(event.sender.id, {text: "Bot Replies: " + event.message.text});
